@@ -1,0 +1,9 @@
+read_verilog spi_master.v
+read_verilog spi_slave.v
+read_verilog spi_system.v
+
+hierarchy -top spi_system
+
+synth
+
+write_verilog spi_system_netlist.v
