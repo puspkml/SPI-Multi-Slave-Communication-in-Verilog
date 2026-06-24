@@ -90,20 +90,19 @@ The design provides a practical implementation of the SPI protocol commonly used
                       |    |    |
                       +----+----+
                            |
-         +-----------------+-----------------+
-         |                 |                 |
-         |                 |                 |
-     +--------+       +--------+       +--------+
-     |Slave 0 |       |Slave 1 |       |Slave 2 |
-     +--------+       +--------+       +--------+
-         |                |                |
-        CS0              CS1              CS2
+         +-----------------+----------------------------------+
+         |                 |               |                  |
+         |                 |               |                  |
+     +--------+       +--------+       +--------+         +--------+
+     |Slave 0 |       |Slave 1 |       |Slave 2 |         |Slave 3 |
+     +--------+       +--------+       +--------+         +--------+
+         |                |                |                  |
+        CS0              CS1              CS2                CS3
 
-                   +--------+
-                   |Slave 3 |
-                   +--------+
-                        |
-                       CS3
+                  
+                   
+                        
+                      
 ```
 
 Only one slave is selected at a time through its chip-select signal while all remaining slaves remain inactive.
